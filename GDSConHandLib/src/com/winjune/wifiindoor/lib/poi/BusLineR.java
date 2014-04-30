@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class BusLineR implements Serializable {
 	private static final long serialVersionUID = 3611171904054576255L;
 
-	public int stationId; //POI id
+	public int poiId; //POI id
 		
 	public String lineName;
 	public String startTime;
@@ -16,7 +16,7 @@ public class BusLineR implements Serializable {
 	private ArrayList<String> stopList;
 	
 	public BusLineR(int id, String name, String startTime, String endTime, String price, String stopInfo) {
-		this.stationId = id;
+		this.poiId = id;
 		this.lineName = name;
 		this.startTime = startTime;
 		this.endTime = endTime;

@@ -9,7 +9,7 @@ public class MovieInfoR implements Serializable{
 	 */
 	private static final long serialVersionUID = 9086867370928311283L;
 
-	private int theaterId; // POI id
+	private int poiId; // POI id
 	
 	public String name;
 	
@@ -21,7 +21,7 @@ public class MovieInfoR implements Serializable{
 	protected ArrayList<ScheduleTime> tomorrowSchedule;
 	
 	public MovieInfoR(int theaterId, String name, String price, String generalDesc) {
-		this.theaterId = theaterId;
+		this.poiId = theaterId;
 		this.name = name;
 		this.generalDesc = generalDesc;
 		this.priceInfo = price;

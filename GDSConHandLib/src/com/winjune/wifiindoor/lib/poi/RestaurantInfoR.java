@@ -10,7 +10,7 @@ public class RestaurantInfoR implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 2177990212070574927L;
-	private int poiId;	
+	public int poiId;	
 	public String  category;
 	public String 	priceInfo;
 	public String	iconUrl;

@@ -14,6 +14,9 @@ public class RestaurantInfoT implements Serializable{
 	private static final long serialVersionUID = 8652726469923067566L;
 	protected ArrayList<RestaurantInfoR> menu = new ArrayList<RestaurantInfoR>();
 	
+	public ArrayList<RestaurantInfoR> getMenu(){
+		return menu;
+	}
 	
 	public void addMenuItem(int poiId, String category, String name, String iconUrl, String price){
 		RestaurantInfoR item = new RestaurantInfoR(poiId, category, name, iconUrl, price);		
