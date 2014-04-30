@@ -7,11 +7,11 @@ import com.thoughtworks.xstream.XStream;
 
 public class PoiOfflineData {
 	
-	public static final String poiTableName = "poi_table";
-	public static final String buslineTableName = "restaurant_table";
-	public static final String movieTableName = "movie_table";
-	public static final String playhouseTableName = "playhouse_table";
-	public static final String restaurantTableName = "restaurant_table";
+	public static final String poiTableName = "poi_table.xml";
+	public static final String buslineTableName = "busline_table.xml";
+	public static final String movieTableName = "movie_table.xml";
+	public static final String playhouseTableName = "playhouse_table.xml";
+	public static final String restaurantTableName = "restaurant_table.xml";
 	
 	public String filesDir;
 	
