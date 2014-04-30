@@ -12,15 +12,22 @@ public class PlayhouseInfoR implements Serializable{
 	 */
 	private static final long serialVersionUID = -6461732438279457847L;
 	
-	private int poiId;
+	public int poiId;
 	protected ArrayList<ScheduleTime> normalDayTime;
 	protected ArrayList<ScheduleTime> weekendTime;
 	protected ArrayList<ScheduleTime> festivalTime;
-	
+
 	public PlayhouseInfoR(){
+		this.poiId = 0;
 		normalDayTime = new ArrayList<ScheduleTime>();
 		weekendTime = new ArrayList<ScheduleTime>();
 		festivalTime = new ArrayList<ScheduleTime>();			
+	}
+	
+	
+	public PlayhouseInfoR(int poiId){
+		this();
+		this.poiId = poiId;
 	}
 		
 	public ArrayList<ScheduleTime> getNormalDayTime() {
