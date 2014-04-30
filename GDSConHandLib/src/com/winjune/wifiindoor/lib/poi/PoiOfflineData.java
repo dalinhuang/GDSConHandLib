@@ -12,6 +12,7 @@ public class PoiOfflineData {
 	public static final String movieTableName = "movie_table.xml";
 	public static final String playhouseTableName = "playhouse_table.xml";
 	public static final String restaurantTableName = "restaurant_table.xml";
+	public static final String festivalTableName = "festival_table.xml";
 	
 	public String filesDir;
 	
@@ -20,6 +21,7 @@ public class PoiOfflineData {
 	public MovieInfoT movieTable;
 	public PlayhouseInfoT playhouseTable;
 	public RestaurantInfoT restaurantTable;
+	public FestivalT festivalTable;
 	
 	public PoiOfflineData(String filesDir){
 		
@@ -29,7 +31,8 @@ public class PoiOfflineData {
 		buslineTable = new BusLinesT();
 		movieTable = new MovieInfoT();
 		playhouseTable = new PlayhouseInfoT();
-		restaurantTable = new RestaurantInfoT();		
+		restaurantTable = new RestaurantInfoT();
+		festivalTable = new FestivalT();
 	}
 	
 	public void fromXML(){
@@ -38,6 +41,7 @@ public class PoiOfflineData {
 		fromXML(filesDir + movieTableName, movieTable);
 		fromXML(filesDir + playhouseTableName, playhouseTable);
 		fromXML(filesDir + restaurantTableName, restaurantTable);		
+		fromXML(filesDir + festivalTableName, festivalTable);
 	}
 	
 	public void toXML(){
@@ -45,7 +49,8 @@ public class PoiOfflineData {
 		toXML(filesDir + buslineTableName, buslineTable);
 		toXML(filesDir + movieTableName, movieTable);
 		toXML(filesDir + playhouseTableName, playhouseTable);
-		toXML(filesDir + restaurantTableName, restaurantTable);		
+		toXML(filesDir + restaurantTableName, restaurantTable);	
+		toXML(filesDir + festivalTableName, festivalTable);
 	}
 	
 	
