@@ -9,7 +9,7 @@ public class MovieInfoR implements Serializable{
 	 */
 	private static final long serialVersionUID = 9086867370928311283L;
 
-	private int poiId; // POI id
+	public int poiId; // POI id
 	
 	public String name;
 	
