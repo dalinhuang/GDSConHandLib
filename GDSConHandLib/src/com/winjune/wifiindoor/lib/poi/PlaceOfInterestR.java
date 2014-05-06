@@ -16,8 +16,8 @@ public class PlaceOfInterestR implements Serializable{
 	
 	public int mapId;
 	
-	public float placeX;
-	public float placeY;
+	public int placeX;
+	public int placeY;
 
 	public String 	iconUrl;
 	public String 	audioUrl;
@@ -132,19 +132,19 @@ public class PlaceOfInterestR implements Serializable{
 		return label;
 	}	
 
-	public float getX(){
+	public int getX(){
 		return placeX;
 	}
 	
-	public void setX(float x){
+	public void setX(int x){
 		this.placeX = x;
 	}
 	
-	public float getY(){
+	public int getY(){
 		return placeY;
 	}
 	
-	public void setY(float y){
+	public void setY(int y){
 		this.placeY = y;
 	}
 	
