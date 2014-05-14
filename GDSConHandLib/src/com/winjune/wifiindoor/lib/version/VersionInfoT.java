@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.winjune.wifiindoor.lib.poi.RestaurantInfoR;
 
 public class VersionInfoT implements Serializable{
@@ -30,7 +31,7 @@ public class VersionInfoT implements Serializable{
 		
 		
 		//Serialize this object
-		XStream xs = new XStream();
+		XStream xs = new XStream(new DomDriver("utf-8"));
 				
 		//Write to the map info file
 		try{
@@ -50,7 +51,7 @@ public class VersionInfoT implements Serializable{
 	
 	//Set current object from XML file
 	public boolean fromXML(String fullFileName, Object obj){	
-		XStream xs = new XStream();
+		XStream xs = new XStream(new DomDriver("utf-8"));
 		
 		try {
 			FileInputStream fis = new FileInputStream(fullFileName);

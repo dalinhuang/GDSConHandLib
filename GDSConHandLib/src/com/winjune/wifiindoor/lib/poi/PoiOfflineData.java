@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
 
 public class PoiOfflineData {
 	
@@ -59,7 +60,7 @@ public class PoiOfflineData {
 		
 		
 		//Serialize this object
-		XStream xs = new XStream();
+		XStream xs = new XStream(new DomDriver("utf-8"));
 				
 		//Write to the map info file
 		try{
@@ -79,7 +80,7 @@ public class PoiOfflineData {
 	
 	//Set current object from XML file
 	public boolean fromXML(String fullFileName, Object obj){	
-		XStream xs = new XStream();
+		XStream xs = new XStream(new DomDriver("utf-8"));
 		
 		try {
 			FileInputStream fis = new FileInputStream(fullFileName);
