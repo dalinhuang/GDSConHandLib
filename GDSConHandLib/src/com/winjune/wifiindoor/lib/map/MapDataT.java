@@ -22,7 +22,7 @@ public class MapDataT implements Serializable{
 		return maps;
 	}
 	
-	public void addIndoorMapItem(int id, String normalMapUrl, String largeMapUrl, String name,
+	public void addMapItem(int id, String normalMapUrl, String largeMapUrl, String name,
 			String label, int cellPixel, int longitude, int latitude){
 		MapDataR item = new MapDataR(id, normalMapUrl, largeMapUrl, name, label, cellPixel, longitude, latitude);
 		maps.add(item);		
