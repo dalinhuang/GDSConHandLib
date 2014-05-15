@@ -3,7 +3,7 @@ package com.winjune.wifiindoor.lib.map;
 import java.io.Serializable;
 
 
-public class IndoorMapR implements Serializable {
+public class MapDataR implements Serializable {
 	/**
 	 * 
 	 */
@@ -17,7 +17,7 @@ public class IndoorMapR implements Serializable {
 	private int longitude;
 	private int latitude;
 
-	public IndoorMapR(int id, String normalMapUrl, String largeMapUrl, String name,
+	public MapDataR(int id, String normalMapUrl, String largeMapUrl, String name,
 			String label, int cellPixel, int longitude, int latitude){
 		this.id = id;
 		this.normalMapUrl = normalMapUrl;

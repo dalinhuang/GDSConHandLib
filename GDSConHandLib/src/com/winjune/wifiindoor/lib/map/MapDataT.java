@@ -10,21 +10,21 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.winjune.wifiindoor.lib.poi.RestaurantInfoR;
 
-public class IndoorMapT implements Serializable{
+public class MapDataT implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -5441323857884982503L;
-	protected ArrayList<IndoorMapR> indoorMaps = new ArrayList<IndoorMapR>();
+	public ArrayList<MapDataR> indoorMaps = new ArrayList<MapDataR>();
 	
-	public ArrayList<IndoorMapR> getIndoorMaps(){
+	public ArrayList<MapDataR> getIndoorMaps(){
 		return indoorMaps;
 	}
 	
 	public void addIndoorMapItem(int id, String normalMapUrl, String largeMapUrl, String name,
 			String label, int cellPixel, int longitude, int latitude){
-		IndoorMapR item = new IndoorMapR(id, normalMapUrl, largeMapUrl, name, label, cellPixel, longitude, latitude);
+		MapDataR item = new MapDataR(id, normalMapUrl, largeMapUrl, name, label, cellPixel, longitude, latitude);
 		indoorMaps.add(item);		
 	}
 	//Serialize current object to XML file
