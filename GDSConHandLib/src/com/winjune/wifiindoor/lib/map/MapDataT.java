@@ -16,16 +16,16 @@ public class MapDataT implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -5441323857884982503L;
-	public ArrayList<MapDataR> indoorMaps = new ArrayList<MapDataR>();
+	public ArrayList<MapDataR> maps = new ArrayList<MapDataR>();
 	
-	public ArrayList<MapDataR> getIndoorMaps(){
-		return indoorMaps;
+	public ArrayList<MapDataR> getMaps(){
+		return maps;
 	}
 	
 	public void addIndoorMapItem(int id, String normalMapUrl, String largeMapUrl, String name,
 			String label, int cellPixel, int longitude, int latitude){
 		MapDataR item = new MapDataR(id, normalMapUrl, largeMapUrl, name, label, cellPixel, longitude, latitude);
-		indoorMaps.add(item);		
+		maps.add(item);		
 	}
 	//Serialize current object to XML file
 	public boolean toXML(String fullFileName, Object obj){
