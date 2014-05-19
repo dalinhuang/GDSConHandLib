@@ -1,13 +1,13 @@
 package com.winjune.wifiindoor.lib.poi;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import com.winjune.wifiindoor.lib.common.OffileDataT;
 
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.DomDriver;
-
-public class PoiOfflineData {
+public class PoiOfflineData extends OffileDataT{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2055835205988095257L;
 	public static final String poiTableName = "poi_table.xml";
 	public static final String buslineTableName = "busline_table.xml";
 	public static final String movieTableName = "movie_table.xml";
@@ -54,47 +54,4 @@ public class PoiOfflineData {
 		toXML(filesDir + festivalTableName, festivalTable);
 	}
 	
-	
-	//Serialize current object to XML file
-	public boolean toXML(String fullFileName, Object obj){
-		
-		
-		//Serialize this object
-		XStream xs = new XStream(new DomDriver("utf-8"));
-				
-		//Write to the map info file
-		try{
-			FileOutputStream fos = new FileOutputStream(fullFileName);
-
-			xs.toXML(obj, fos);
-			
-			fos.close();
-			
-		}catch(Exception ex){
-			ex.printStackTrace();
-			return false;
-		}
-		
-		return true;
-	}
-	
-	//Set current object from XML file
-	public boolean fromXML(String fullFileName, Object obj){	
-		XStream xs = new XStream(new DomDriver("utf-8"));
-		
-		try {
-			FileInputStream fis = new FileInputStream(fullFileName);
-			
-			xs.fromXML(fis, obj);		
-			
-			fis.close();
-			return true;
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-		
-		return false;
-	}	
-		
-			
 }
