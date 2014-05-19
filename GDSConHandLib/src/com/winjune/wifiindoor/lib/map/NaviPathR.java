@@ -59,6 +59,10 @@ public class NaviPathR implements Serializable {
 	public String getForwardGuide() {
 		return forwardGuide;
 	}
+	
+	public int getDistance(){
+		return 10;
+	}
 
 	public void setForwardGuide(String forwardGuide) {
 		this.forwardGuide = forwardGuide;

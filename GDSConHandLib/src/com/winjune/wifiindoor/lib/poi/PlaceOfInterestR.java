@@ -132,19 +132,19 @@ public class PlaceOfInterestR implements Serializable{
 		return label;
 	}	
 
-	public int getX(){
+	public int getPlaceX(){
 		return placeX;
 	}
 	
-	public void setX(int x){
+	public void setPlaceX(int x){
 		this.placeX = x;
 	}
 	
-	public int getY(){
+	public int getPlaceY(){
 		return placeY;
 	}
 	
-	public void setY(int y){
+	public void setPlaceY(int y){
 		this.placeY = y;
 	}
 	
