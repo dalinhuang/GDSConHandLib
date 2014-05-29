@@ -24,6 +24,8 @@ public class OffileDataT implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 6707809803440817987L;
+	public static final String xmlFileExtension = ".xml";
+	public static final String jsonFileExtension = ".json";
 
 	//Serialize current object to XML file
 	public boolean toXML(String fullFileName, Object obj){
@@ -97,15 +99,14 @@ public class OffileDataT implements Serializable{
 	
 	// Set current object from Json file
 	public Object fromJson(String fullFileName,
-			Object obj) {
+			Class<? extends Object> classOfT) {
 		Gson gson = new Gson();
 
 		try {
 //			BufferedReader br = new BufferedReader(new FileReader(fullFileName));
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fullFileName), "GBK"));
 			// convert the json string back to object
-			obj = gson.fromJson(br, obj.getClass());
-			return obj;
+			return gson.fromJson(br, classOfT);
 		} catch (JsonSyntaxException ex) {
 			ex.printStackTrace();
 		} catch (JsonIOException ex) {
@@ -116,7 +117,7 @@ public class OffileDataT implements Serializable{
 			ex.printStackTrace();
 		}
 
-		return obj;
+		return null;
 	}
 
 }

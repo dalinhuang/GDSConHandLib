@@ -8,12 +8,12 @@ public class PoiOfflineData extends OffileDataT{
 	 * 
 	 */
 	private static final long serialVersionUID = -2055835205988095257L;
-	public static final String poiTableName = "poi_table.xml";
-	public static final String buslineTableName = "busline_table.xml";
-	public static final String movieTableName = "movie_table.xml";
-	public static final String playhouseTableName = "playhouse_table.xml";
-	public static final String restaurantTableName = "restaurant_table.xml";
-	public static final String festivalTableName = "festival_table.xml";
+	public static final String poiTableName = "poi_table";
+	public static final String buslineTableName = "busline_table";
+	public static final String movieTableName = "movie_table";
+	public static final String playhouseTableName = "playhouse_table";
+	public static final String restaurantTableName = "restaurant_table";
+	public static final String festivalTableName = "festival_table";
 	
 	public String filesDir;
 	
@@ -37,21 +37,38 @@ public class PoiOfflineData extends OffileDataT{
 	}
 	
 	public void fromXML(){
-		fromXML(filesDir + poiTableName, poiTable);
-		fromXML(filesDir + buslineTableName, buslineTable);
-		fromXML(filesDir + movieTableName, movieTable);
-		fromXML(filesDir + playhouseTableName, playhouseTable);
-		fromXML(filesDir + restaurantTableName, restaurantTable);		
-		fromXML(filesDir + festivalTableName, festivalTable);
+		fromXML(filesDir + poiTableName + xmlFileExtension, poiTable);
+		fromXML(filesDir + buslineTableName + xmlFileExtension, buslineTable);
+		fromXML(filesDir + movieTableName + xmlFileExtension, movieTable);
+		fromXML(filesDir + playhouseTableName + xmlFileExtension, playhouseTable);
+		fromXML(filesDir + restaurantTableName + xmlFileExtension, restaurantTable);		
+		fromXML(filesDir + festivalTableName + xmlFileExtension, festivalTable);
 	}
 	
 	public void toXML(){
-		toXML(filesDir + poiTableName, poiTable);
-		toXML(filesDir + buslineTableName, buslineTable);
-		toXML(filesDir + movieTableName, movieTable);
-		toXML(filesDir + playhouseTableName, playhouseTable);
-		toXML(filesDir + restaurantTableName, restaurantTable);	
-		toXML(filesDir + festivalTableName, festivalTable);
+		toXML(filesDir + poiTableName + xmlFileExtension, poiTable);
+		toXML(filesDir + buslineTableName + xmlFileExtension, buslineTable);
+		toXML(filesDir + movieTableName + xmlFileExtension, movieTable);
+		toXML(filesDir + playhouseTableName + xmlFileExtension, playhouseTable);
+		toXML(filesDir + restaurantTableName + xmlFileExtension, restaurantTable);	
+		toXML(filesDir + festivalTableName + xmlFileExtension, festivalTable);
 	}
 	
+	public void fromJson(){
+		fromJson(filesDir + poiTableName + jsonFileExtension, PlaceOfInterestT.class);
+		fromJson(filesDir + buslineTableName + jsonFileExtension, BusLinesT.class);
+		fromJson(filesDir + movieTableName + jsonFileExtension, MovieInfoT.class);
+		fromJson(filesDir + playhouseTableName + jsonFileExtension, PlayhouseInfoT.class);
+		fromJson(filesDir + restaurantTableName + jsonFileExtension, RestaurantInfoT.class);		
+		fromJson(filesDir + festivalTableName + jsonFileExtension, FestivalT.class);
+	}
+	
+	public void toJson(){
+		toJson(filesDir + poiTableName + jsonFileExtension, poiTable);
+		toJson(filesDir + buslineTableName + jsonFileExtension, buslineTable);
+		toJson(filesDir + movieTableName + jsonFileExtension, movieTable);
+		toJson(filesDir + playhouseTableName + jsonFileExtension, playhouseTable);
+		toJson(filesDir + restaurantTableName + jsonFileExtension, restaurantTable);	
+		toJson(filesDir + festivalTableName + jsonFileExtension, festivalTable);
+	}
 }
