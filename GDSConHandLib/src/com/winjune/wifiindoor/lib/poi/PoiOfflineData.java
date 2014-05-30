@@ -55,12 +55,12 @@ public class PoiOfflineData extends OffileDataT{
 	}
 	
 	public void fromJson(){
-		fromJson(filesDir + poiTableName + jsonFileExtension, PlaceOfInterestT.class);
-		fromJson(filesDir + buslineTableName + jsonFileExtension, BusLinesT.class);
-		fromJson(filesDir + movieTableName + jsonFileExtension, MovieInfoT.class);
-		fromJson(filesDir + playhouseTableName + jsonFileExtension, PlayhouseInfoT.class);
-		fromJson(filesDir + restaurantTableName + jsonFileExtension, RestaurantInfoT.class);		
-		fromJson(filesDir + festivalTableName + jsonFileExtension, FestivalT.class);
+		poiTable = (PlaceOfInterestT) fromJson(filesDir + poiTableName + jsonFileExtension, PlaceOfInterestT.class);
+		buslineTable = (BusLinesT) fromJson(filesDir + buslineTableName + jsonFileExtension, BusLinesT.class);
+		movieTable = (MovieInfoT) fromJson(filesDir + movieTableName + jsonFileExtension, MovieInfoT.class);
+		playhouseTable = (PlayhouseInfoT) fromJson(filesDir + playhouseTableName + jsonFileExtension, PlayhouseInfoT.class);
+		restaurantTable = (RestaurantInfoT) fromJson(filesDir + restaurantTableName + jsonFileExtension, RestaurantInfoT.class);		
+		festivalTable = (FestivalT) fromJson(filesDir + festivalTableName + jsonFileExtension, FestivalT.class);
 	}
 	
 	public void toJson(){

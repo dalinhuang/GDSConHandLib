@@ -13,6 +13,7 @@ import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.thoughtworks.xstream.XStream;
@@ -72,7 +73,7 @@ public class OffileDataT implements Serializable{
 	public boolean toJson(String fullFileName, Object obj){
 		
 		
-		Gson gson = new Gson();
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		
 		// convert java object to JSON format,
 		// and returned as JSON formatted string
@@ -100,7 +101,8 @@ public class OffileDataT implements Serializable{
 	// Set current object from Json file
 	public Object fromJson(String fullFileName,
 			Class<? extends Object> classOfT) {
-		Gson gson = new Gson();
+//		Gson gson = new Gson();
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 
 		try {
 //			BufferedReader br = new BufferedReader(new FileReader(fullFileName));
