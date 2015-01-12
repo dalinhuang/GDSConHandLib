@@ -18,6 +18,8 @@ public class PlaceOfInterestR implements Serializable{
 	
 	public int placeX;
 	public int placeY;
+	
+	public int nearNaviNode;
 
 	public String 	iconUrl;
 	public String 	audioUrl;
@@ -53,6 +55,8 @@ public class PlaceOfInterestR implements Serializable{
 		
 		this.placeX = that.placeX;
 		this.placeY = that.placeY;
+		
+		this.nearNaviNode = that.nearNaviNode;
 
 		this.iconUrl = that.iconUrl;
 		this.audioUrl = that.audioUrl;
@@ -85,6 +89,7 @@ public class PlaceOfInterestR implements Serializable{
 		this.mapId = 0;
 		this.placeX = 0;
 		this.placeY = 0;
+		this.nearNaviNode = 0;
 			
 		this.iconUrl = "";		
 		this.label = "";
